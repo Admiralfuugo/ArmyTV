@@ -1,0 +1,4 @@
+:HL["/_next/static/chunks/3zkwu292b_hak.css","style"]
+:HL["/_next/static/chunks/0pm_omcic1u2f.css","style"]
+:HL["/_next/static/chunks/3w2z655c4f7hn.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"section","param":{"type":"d","key":"obuna","siblings":["film"]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"uL3_ZVL8QjEAxjOoUwYxA"}
