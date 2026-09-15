@@ -6,14 +6,26 @@ import { resolve, extname, sep } from 'node:path';
 
 const root = resolve('out');
 const port = Number(process.env.PORT || 3000);
+const basePath = (process.env.NEXT_PUBLIC_BASE_PATH || '').replace(/\/+$/, '');
 const types = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json', '.txt': 'text/plain; charset=utf-8', '.svg': 'image/svg+xml', '.jpg': 'image/jpeg', '.png': 'image/png', '.webp': 'image/webp', '.ico': 'image/x-icon', '.mp4': 'video/mp4', '.woff2': 'font/woff2' };
 try { await stat(resolve(root, 'index.html')); } catch { console.error('Avval npm run build buyrug‘ini bajaring.'); process.exit(1); }
 
 createServer(async (req, res) => {
   if (req.method !== 'GET' && req.method !== 'HEAD') { res.writeHead(405, { Allow: 'GET, HEAD' }); res.end(); return; }
   try {
-    const pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
-    let file = resolve(root, `.${pathname}`);
+    const requestUrl = new URL(req.url, 'http://localhost');
+    const pathname = decodeURIComponent(requestUrl.pathname);
+    if (basePath && pathname === basePath) {
+      res.writeHead(308, { Location: `${basePath}/${requestUrl.search}` });
+      res.end();
+      return;
+    }
+    if (basePath && !pathname.startsWith(`${basePath}/`)) {
+      res.writeHead(404);
+      res.end('Not found');
+      return;
+    }
+    let file = resolve(root, `.${pathname.slice(basePath.length)}`);
     if (file !== root && !file.startsWith(root + sep)) { res.writeHead(403); res.end(); return; }
     let info;
     try { info = await stat(file); if (info.isDirectory()) { file = resolve(file, 'index.html'); info = await stat(file); } }
@@ -38,4 +50,4 @@ createServer(async (req, res) => {
     stream.on('error', () => res.destroy());
     stream.pipe(res);
   } catch { if (!res.headersSent) res.writeHead(400); res.end('Noto‘g‘ri so‘rov'); }
-}).listen(port, '0.0.0.0', () => console.log(`ArmTv: http://localhost:${port}`));
+}).listen(port, '0.0.0.0', () => console.log(`ArmTv: http://localhost:${port}${basePath}/`));

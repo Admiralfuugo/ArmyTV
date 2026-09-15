@@ -1,5 +1,7 @@
 "use client";
 
+import { assetPath } from "@/lib/asset-path";
+
 import { createContext, useContext, useState, useRef, useEffect, type ReactNode } from "react";
 import { Bookmark, Check, CheckCircle2, Info, Play, ShieldCheck } from "lucide-react";
 import { getMedia } from "@/lib/data";
@@ -71,7 +73,7 @@ export function ArmTVProvider({ children }: { children: ReactNode }) {
           onLoadedMetadata={(event) => { const savedTime = progress[playing.id]; if (savedTime && savedTime < event.currentTarget.duration - 1) event.currentTarget.currentTime = savedTime; }}
           onTimeUpdate={(event) => { const current = Math.floor(event.currentTarget.currentTime); if (Math.abs(current - lastSave.current) >= 2) { lastSave.current = current; setProgress((old) => ({ ...old, [playing.id]: current })); } }}
           onEnded={() => { setProgress((old) => ({ ...old, [playing.id]: 0 })); }}>
-          <source src="/media/armtv-preview.mp4" type="video/mp4"/>
+          <source src={assetPath("/media/armtv-preview.mp4")} type="video/mp4"/>
           Brauzeringiz video pleyerni qo‘llab-quvvatlamaydi.
         </video>
         <span className="player-demo-label">NAMUNA LAVHASI</span>

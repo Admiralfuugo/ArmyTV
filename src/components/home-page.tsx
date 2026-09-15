@@ -1,5 +1,7 @@
 "use client";
 
+import { assetPath } from "@/lib/asset-path";
+
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
@@ -9,9 +11,9 @@ import { useArmTV } from "./armtv-provider";
 import { MediaCard } from "./media-pages";
 
 const slides = [
-  { kicker: "VATANPARVARLIK RUHIDAGI SARALANGAN KONTENT", title: <>VATAN UCHUN,<br/><em>XALQ UCHUN.</em></>, description: "Jasorat, sadoqat va milliy g‘urur. Qalblarni birlashtiruvchi hikoyalar — ArmTv’da.", image: "/images/hero-soldier.jpg", id: "vatan", label: "Vatanparvarlik" },
-  { kicker: "ARMTV TAVSIYA ETADI · HARBIY SERIAL", title: <>SARHADLARDA<br/><em>YURAKLAR BEDOR.</em></>, description: "Vatan tinchligini asrayotgan insonlar. Burch va do‘stlik haqidagi «Chegarachi» serialini kashf eting.", image: "/images/chegarachi.jpg", id: "chegarachi", label: "Chegarachi" },
-  { kicker: "OILA DAVRASIDA TOMOSHA QILING", title: <>HAR BIR HAYOT —<br/><em>BIR HIKOYA.</em></>, description: "Mehr, umid va hayotning go‘zal lahzalari. Yaqinlaringiz bilan yaxshi filmlar ulashing.", image: "/images/hayot.jpg", id: "hayot", label: "Hayot" },
+  { kicker: "VATANPARVARLIK RUHIDAGI SARALANGAN KONTENT", title: <>VATAN UCHUN,<br/><em>XALQ UCHUN.</em></>, description: "Jasorat, sadoqat va milliy g‘urur. Qalblarni birlashtiruvchi hikoyalar — ArmTv’da.", image: assetPath("/images/hero-soldier.jpg"), id: "vatan", label: "Vatanparvarlik" },
+  { kicker: "ARMTV TAVSIYA ETADI · HARBIY SERIAL", title: <>SARHADLARDA<br/><em>YURAKLAR BEDOR.</em></>, description: "Vatan tinchligini asrayotgan insonlar. Burch va do‘stlik haqidagi «Chegarachi» serialini kashf eting.", image: assetPath("/images/chegarachi.jpg"), id: "chegarachi", label: "Chegarachi" },
+  { kicker: "OILA DAVRASIDA TOMOSHA QILING", title: <>HAR BIR HAYOT —<br/><em>BIR HIKOYA.</em></>, description: "Mehr, umid va hayotning go‘zal lahzalari. Yaqinlaringiz bilan yaxshi filmlar ulashing.", image: assetPath("/images/hayot.jpg"), id: "hayot", label: "Hayot" },
 ];
 const categories = [
   { label: "Jonli TV", note: "Sevimli telekanallar", href: "/jonli-efir", icon: Tv },

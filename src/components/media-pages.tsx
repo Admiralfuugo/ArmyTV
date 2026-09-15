@@ -1,5 +1,7 @@
 "use client";
 
+import { assetPath } from "@/lib/asset-path";
+
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -66,7 +68,7 @@ export function CatalogPage({ kind = "all" }: { kind?: "all" | "translated" | "k
   return <div className={`catalog-page catalog-kind-${kind}`}>
     <div className="catalog-heading"><div><p className="eyebrow">{kind === "kids" ? "O‘RGANAMIZ. KULAMIZ. ULG‘AYAMIZ." : "ARMTV KOLLEKSIYASI"}</p><h1>{catalogTitles[kind][0]}</h1><p>{catalogTitles[kind][1]}</p></div>{kind === "all" && <Link href="/tarjima" className="button button-secondary catalog-translated-link"><Globe2 size={16}/>Tarjima filmlar<ArrowRight size={15}/></Link>}{kind === "saved" && <span className="catalog-count"><Bookmark size={16} />{saved.length} ta saqlangan</span>}</div>
 
-    {kind === "kids" && <section className="catalog-kids-banner"><div className="catalog-kids-content"><span className="catalog-kids-label"><Sparkles size={14} />QIZIQARLI VA FOYDALI</span><h2>Tasavvurga<br />qanot bering!</h2><p>Sevimli qahramonlar, yangi kashfiyotlar<br />va mehrga to‘la hikoyalar.</p><button className="button button-gold" onClick={() => document.getElementById("catalog-results")?.scrollIntoView({ behavior: "smooth" })}>Sarguzashtni boshlash<ArrowRight size={16} /></button></div><div className="catalog-kids-illustration" aria-hidden="true"><span className="catalog-kids-orbit" /><Star className="catalog-kids-star one" size={40} fill="currentColor" /><Star className="catalog-kids-star two" size={22} fill="currentColor" /><Image src="/images/kids-1.jpg" alt="" width={155} height={235} /><span className="catalog-kids-planet">✦</span></div><span className="catalog-kids-safe"><ShieldCheck size={14} />Bolalar uchun saralangan</span></section>}
+    {kind === "kids" && <section className="catalog-kids-banner"><div className="catalog-kids-content"><span className="catalog-kids-label"><Sparkles size={14} />QIZIQARLI VA FOYDALI</span><h2>Tasavvurga<br />qanot bering!</h2><p>Sevimli qahramonlar, yangi kashfiyotlar<br />va mehrga to‘la hikoyalar.</p><button className="button button-gold" onClick={() => document.getElementById("catalog-results")?.scrollIntoView({ behavior: "smooth" })}>Sarguzashtni boshlash<ArrowRight size={16} /></button></div><div className="catalog-kids-illustration" aria-hidden="true"><span className="catalog-kids-orbit" /><Star className="catalog-kids-star one" size={40} fill="currentColor" /><Star className="catalog-kids-star two" size={22} fill="currentColor" /><Image src={assetPath("/images/kids-1.jpg")} alt="" width={155} height={235} /><span className="catalog-kids-planet">✦</span></div><span className="catalog-kids-safe"><ShieldCheck size={14} />Bolalar uchun saralangan</span></section>}
 
     {kind === "translated" && <div className="catalog-language-note"><Globe2 size={20} /><p><strong>Yangi olamlar. Tanish til.</strong><span>O‘zbek, rus va original tildagi filmlar to‘plami.</span></p></div>}
 
