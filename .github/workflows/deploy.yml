@@ -1,4 +1,4 @@
-name: Deploy ArmTV to GitHub Pages
+name: Deploy ArmyTv to GitHub Pages
 
 on:
   push:

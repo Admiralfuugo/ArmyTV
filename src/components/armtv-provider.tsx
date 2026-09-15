@@ -78,12 +78,12 @@ export function ArmTVProvider({ children }: { children: ReactNode }) {
         </video>
         <span className="player-demo-label">NAMUNA LAVHASI</span>
       </div>
-      <div className="player-info"><div><span className="eyebrow"><Play size={12}/> ARMTV PLEYER</span><h3>{playing.title}</h3><p>{playing.year} <span>·</span> {playing.genre} <span>·</span> {playing.age}</p></div>
+      <div className="player-info"><div><span className="eyebrow"><Play size={12}/> ARMYTV PLEYER</span><h3>{playing.title}</h3><p>{playing.year} <span>·</span> {playing.genre} <span>·</span> {playing.age}</p></div>
         <button className="button button-secondary" onClick={() => toggleSaved(playing.id)}>{saved.includes(playing.id) ? <Check size={17}/> : <Bookmark size={17}/>} {saved.includes(playing.id) ? "Saqlandi" : "Saqlash"}</button>
       </div>
       <p className="demo-note"><Info size={16}/> Bu pleyer uchun yaratilgan qisqa namuna. Filmning asl videosi va ovoz yo‘laklari hali ulanmagan.</p>
     </Modal>}
-    {profileOpen && <Modal title={profile ? "Mening profilim" : "ArmTv’ga xush kelibsiz"} onClose={() => { setProfileOpen(false); setFormError(""); }} className="profile-modal">
+    {profileOpen && <Modal title={profile ? "Mening profilim" : "ArmyTv’ga xush kelibsiz"} onClose={() => { setProfileOpen(false); setFormError(""); }} className="profile-modal">
       {profile ? <div className="profile-content"><div className="profile-avatar">{profile.name.slice(0, 1).toUpperCase()}</div><h3>{profile.name}</h3><p>{profile.phone}</p><div className="profile-stats"><div><strong>{saved.length}</strong><span>Saqlangan kontent</span></div><div><strong>{subscription ? "Premium" : "Bepul"}</strong><span>Demo profil</span></div></div><p className="demo-note"><ShieldCheck size={17}/> Profil ma’lumotlari faqat ushbu brauzerda saqlanadi.</p><button className="button button-secondary full-width" onClick={() => { setProfile(null); setProfileOpen(false); notify("Profildan chiqdingiz"); }}>Profildan chiqish</button></div>
       : <form className="profile-form" onSubmit={(event) => { event.preventDefault(); const digits = phone.replace(/\D/g, ""); if (name.trim().length < 2) { setFormError("Ismingizni kiriting (kamida 2 harf)."); return; } if (!/^998\d{9}$/.test(digits) && !/^\d{9}$/.test(digits)) { setFormError("Telefon raqamini to‘g‘ri kiriting: +998 90 123 45 67"); return; } setProfile({ name: name.trim(), phone: digits.startsWith("998") ? `+${digits}` : `+998${digits}` }); setProfileOpen(false); setFormError(""); notify("Demo profilingiz tayyor. Xush kelibsiz!"); }}>
         <div className="profile-welcome-icon"><ShieldCheck size={31}/></div><p>Sevimli kontentingiz, bilim va ilhom — barchasi bir joyda.</p>

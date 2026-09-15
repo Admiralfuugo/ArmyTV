@@ -1,4 +1,4 @@
-# ArmTV
+# ArmyTv
 
 Next.js asosidagi o‘zbekcha media platforma. `npm run build` barcha sahifalarni
 statik HTML, CSS va JavaScript fayllariga aylantirib, `out/` papkasiga chiqaradi.
@@ -9,7 +9,7 @@ GitHub Pages va boshqa statik hostinglar shu papkani e’lon qilishi kerak.
 1. O‘zgarishlarni GitHubdagi `main` branchga push qiling.
 2. Repozitoriyda **Settings → Pages → Build and deployment → Source** orqali
    **GitHub Actions** ni tanlang.
-3. **Actions → Deploy ArmTV to GitHub Pages → Run workflow** ni bosing.
+3. **Actions → Deploy ArmyTv to GitHub Pages → Run workflow** ni bosing.
 4. Deploy muvaffaqiyatli tugagach, manzil **Settings → Pages** da ko‘rinadi.
    Domen ulanmagan bo‘lsa, ushbu repo manzili: <https://admiralfuugo.github.io/ArmyTV/>.
 
@@ -34,7 +34,7 @@ fayllari build qilinmaydi va sayt ochilmaydi.
    `www` orqali ochmoqchi bo‘lsangiz, Custom domain maydoniga ham `www` bilan
    yozing. CNAME qiymatiga `https://` yoki `/ArmyTV` qo‘shilmaydi.
 3. Domen qo‘shilganda, almashtirilganda yoki olib tashlanganda **Actions → Deploy
-   ArmTV to GitHub Pages → Run workflow** orqali qayta build qiling. Workflow
+   ArmyTv to GitHub Pages → Run workflow** orqali qayta build qiling. Workflow
    GitHub Pages sozlamasidan sayt yo‘lini oladi: repo manzilida `/ArmyTV`, shaxsiy
    domenda esa bo‘sh yo‘l. Rasm, video va sahifa havolalari shu qiymatga moslashadi.
 4. DNS tekshiruvi tugagach **Enforce HTTPS** ni yoqing. DNS va sertifikat

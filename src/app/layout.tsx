@@ -4,9 +4,9 @@ import { AppShell } from "@/components/app-shell";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: { default: "ArmTv — Vatan. Bilim. Ilhom.", template: "%s | ArmTv" },
-  description: "Filmlar, jonli telekanallar, elektron kutubxona, ta’lim va viktorinalar. Vatan, bilim va ilhom bir joyda — ArmTv.",
-  applicationName: "ArmTv",
+  title: { default: "ArmyTv. — Vatan. Bilim. Ilhom.", template: "%s | ArmyTv." },
+  description: "Filmlar, jonli telekanallar, elektron kutubxona, ta’lim va viktorinalar. Vatan, bilim va ilhom bir joyda — ArmyTv.",
+  applicationName: "ArmyTv.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

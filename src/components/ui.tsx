@@ -9,7 +9,7 @@ export function Brand({ small = false }: { small?: boolean }) {
       <path d="M20 2C14 7 8 9 3 9v15c0 9 9 15 17 20 8-5 17-11 17-20V9C32 9 26 7 20 2Z" stroke="currentColor" strokeWidth="2.3"/>
       <path d="m20 10 2.4 8.7 8.1-3.9-4.9 7.5 8.4 3-8.9 1.3 2 8.7-7.1-5.6-7.1 5.6 2-8.7-8.9-1.3 8.4-3-4.9-7.5 8.1 3.9L20 10Z" fill="currentColor"/>
     </svg>
-    <span>Arm<span className="brand-gold">Tv</span><span className="brand-dot">.</span></span>
+    <span>Army<span className="brand-gold">Tv</span><span className="brand-dot">.</span></span>
   </span>;
 }
 
