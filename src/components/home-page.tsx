@@ -11,7 +11,7 @@ import { useArmTV } from "./armtv-provider";
 import { MediaCard } from "./media-pages";
 
 const slides = [
-  { kicker: "VATANPARVARLIK RUHIDAGI SARALANGAN KONTENT", title: <>VATAN UCHUN,<br/><em>XALQ UCHUN.</em></>, description: "Jasorat, sadoqat va milliy g‘urur. Qalblarni birlashtiruvchi hikoyalar — ArmyTv’da.", image: assetPath("/images/hero-soldier.jpg"), id: "vatan", label: "Vatanparvarlik" },
+  { kicker: "VATANPARVARLIK RUHIDAGI SARALANGAN KONTENT", title: <>AMIR,<br/><em>TEMUR.</em></>, description: "Jasorat, sadoqat va milliy g‘urur. Qalblarni birlashtiruvchi hikoyalar — ArmyTv’da.", image: assetPath("/images/hero-soldier.jpg"), id: "vatan", label: "Vatanparvarlik" },
   { kicker: "ARMYTV TAVSIYA ETADI · HARBIY SERIAL", title: <>SARHADLARDA<br/><em>YURAKLAR BEDOR.</em></>, description: "Vatan tinchligini asrayotgan insonlar. Burch va do‘stlik haqidagi «Chegarachi» serialini kashf eting.", image: assetPath("/images/chegarachi.jpg"), id: "chegarachi", label: "Chegarachi" },
   { kicker: "OILA DAVRASIDA TOMOSHA QILING", title: <>HAR BIR HAYOT —<br/><em>BIR HIKOYA.</em></>, description: "Mehr, umid va hayotning go‘zal lahzalari. Yaqinlaringiz bilan yaxshi filmlar ulashing.", image: assetPath("/images/hayot.jpg"), id: "hayot", label: "Hayot" },
 ];
