@@ -50,4 +50,4 @@ createServer(async (req, res) => {
     stream.on('error', () => res.destroy());
     stream.pipe(res);
   } catch { if (!res.headersSent) res.writeHead(400); res.end('Noto‘g‘ri so‘rov'); }
-}).listen(port, '0.0.0.0', () => console.log(`MudafaaTv: http://localhost:${port}${basePath}/`));
+}).listen(port, '0.0.0.0', () => console.log(`MudofaaTv: http://localhost:${port}${basePath}/`));

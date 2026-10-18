@@ -5,7 +5,7 @@ import { X } from "lucide-react";
 
 export function Brand({ small = false }: { small?: boolean }) {
   return <span className={`brand ${small ? "brand-small" : ""}`}>
-    <span>Mudafaa<span className="brand-gold">Tv</span><span className="brand-dot">.</span></span>
+    <span>Mudofaa<span className="brand-gold">Tv</span><span className="brand-dot">.</span></span>
   </span>;
 }
 

@@ -4,7 +4,7 @@ import { useSyncExternalStore } from "react";
 import { Moon, Sun } from "lucide-react";
 import { THEME_STORAGE_KEY, type Theme } from "@/lib/theme";
 
-const themeEvent = "mudafaatv-theme-change";
+const themeEvent = "mudofaatv-theme-change";
 let sessionPreference: Theme | null = null;
 
 function readPreference(): Theme | null {

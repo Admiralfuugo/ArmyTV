@@ -6,9 +6,9 @@ import "./globals.css";
 import "./theme.css";
 
 export const metadata: Metadata = {
-  title: { default: "MudafaaTv. — Vatan. Bilim. Ilhom.", template: "%s | MudafaaTv." },
-  description: "Filmlar, jonli telekanallar, elektron kutubxona, ta’lim va viktorinalar. Vatan, bilim va ilhom bir joyda — MudafaaTv.",
-  applicationName: "MudafaaTv.",
+  title: { default: "MudofaaTv. — Vatan. Bilim. Ilhom.", template: "%s | MudofaaTv." },
+  description: "Filmlar, jonli telekanallar, elektron kutubxona, ta’lim va viktorinalar. Vatan, bilim va ilhom bir joyda — MudofaaTv.",
+  applicationName: "MudofaaTv.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

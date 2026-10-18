@@ -1,4 +1,4 @@
-name: Deploy MudafaaTv to GitHub Pages
+name: Deploy MudofaaTv to GitHub Pages
 
 on:
   push:

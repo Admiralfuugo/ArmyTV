@@ -1,5 +1,5 @@
 export type Theme = "light" | "dark";
-export const THEME_STORAGE_KEY = "mudafaatv-theme";
+export const THEME_STORAGE_KEY = "mudofaatv-theme";
 
 // Run while parsing the document so a saved preference is applied before paint.
 export const themeInitScript = `(() => {
