@@ -3,7 +3,7 @@ import { mkdir } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
-const destination = process.env.ARMTV_SCREENSHOTS || join(tmpdir(), 'armytv-review');
+const destination = process.env.ARMTV_SCREENSHOTS || join(tmpdir(), 'mudafaatv-review');
 const baseURL = process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3001';
 await mkdir(destination, { recursive: true });
 const browser = await chromium.launch({ channel: 'chrome', headless: true });

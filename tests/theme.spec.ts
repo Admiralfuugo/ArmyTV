@@ -37,7 +37,7 @@ test("theme changes sync between tabs", async ({ page, context }) => {
   await expect(other.locator("html")).toHaveAttribute("data-theme", "light");
   await other.getByRole("button", { name: "Tungi rejim", exact: true }).click();
   await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
-  await other.evaluate(() => localStorage.removeItem("armytv-theme"));
+  await other.evaluate(() => localStorage.removeItem("mudafaatv-theme"));
   await page.emulateMedia({ colorScheme: "light" });
   await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
   await other.close();
@@ -45,7 +45,7 @@ test("theme changes sync between tabs", async ({ page, context }) => {
 
 test("saved light mode is painted even before application JavaScript loads", async ({ page }) => {
   await page.emulateMedia({ colorScheme: "dark" });
-  await page.addInitScript(() => localStorage.setItem("armytv-theme", "light"));
+  await page.addInitScript(() => localStorage.setItem("mudafaatv-theme", "light"));
   await page.route("**/_next/static/**/*.js", route => route.abort());
   await page.goto("./", { waitUntil: "domcontentloaded" });
   await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
@@ -54,7 +54,7 @@ test("saved light mode is painted even before application JavaScript loads", asy
 
 test("invalid preferences and unavailable storage still allow switching", async ({ page }) => {
   await page.emulateMedia({ colorScheme: "light" });
-  await page.addInitScript(() => localStorage.setItem("armytv-theme", "invalid"));
+  await page.addInitScript(() => localStorage.setItem("mudafaatv-theme", "invalid"));
   await page.goto("./");
   await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
   await page.addInitScript(() => {
